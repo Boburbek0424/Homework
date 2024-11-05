@@ -1,0 +1,6 @@
+a=int(input("a son : "))
+b=int(input("b son : "))
+print("Yig'indi:",a+b)
+print("Ko'paytma:",a*b)
+print("a ning moduli:",abs(a))
+print("b ning moduli:",abs(b))
