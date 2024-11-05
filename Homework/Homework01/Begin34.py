@@ -1,5 +1,0 @@
-X = float(input("Shokoladning umumiy qiymatini kiriting(X): "))
-A = float(input("Shokoladning summasini kiriting: "))
-Y = float(input("Konfetning umumiy qiymatini kiriting: "))
-B = float(input("Konfetning summasini kiriting: "))
-print("1 kg shokolad 1 kg konfetdan",A/X-B/Y,"so'm qimmat")
