@@ -1,0 +1,6 @@
+a=int(input("a son : "))
+b=int(input("b son : "))
+print("Yig'indi:",a+b)
+print("Ko'paytma:",a*b)
+print("a ning kvadrati:",a**2)
+print("b ning kvadrati:",b**2)
