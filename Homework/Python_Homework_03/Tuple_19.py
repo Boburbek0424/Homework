@@ -1,0 +1,7 @@
+my_tuple=(42,12,432,23,23)
+Element=int(input("Enter element to remove from tuple: "))
+my_list=list(my_tuple)
+my_list.remove(Element)
+#my_tuple=tuple(my_list) 
+my_tuple=tuple(my_list)
+print(my_tuple)
