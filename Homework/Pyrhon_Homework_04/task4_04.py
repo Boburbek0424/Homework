@@ -31,4 +31,3 @@ print(f"Student median: {median(students)}")
 print('\n')
 print(f"Tution mean: {mean(tuitionfee)}")
 print(f"Tution median: {median(tuitionfee)}")
-    
