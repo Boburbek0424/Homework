@@ -75,10 +75,8 @@ def main():
     notes = load_notes()
     while True:
         choice = input("Enter your choice: ").strip().upper()
-
         if choice == "1":
             display_notes(notes)
-            
         elif choice == "2":
             for note in notes:
                 if note["id"] == note_id:
