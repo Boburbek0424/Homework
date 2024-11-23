@@ -27,7 +27,6 @@ class Notebook:
         self.load_notes()
 
     def load_notes(self):
-        """Load notes from the file."""
         try:
             with open(self.filename, "r") as file:
                 for line in file:
@@ -38,13 +37,11 @@ class Notebook:
             print("\nNo existing notes found, starting a new notebook.")
 
     def save_notes(self):
-        """Save all notes to the file."""
         with open(self.filename, "w") as file:
             for note in self.notes:
                 file.write(note.to_file_format() + "\n")
 
     def show_all_notes(self):
-        """Display all notes with their content."""
         if not self.notes:
             print("\nNo notes found.")
         else:
@@ -53,7 +50,6 @@ class Notebook:
                 print(f"ID: {note.id} | Created: {note.created_date} | Content: {note.content}")
 
     def show_note_details(self):
-        """Display details of a specific note."""
         note_id = int(input("\nEnter the ID of the note: "))
         for note in self.notes:
             if note.id == note_id:
@@ -62,7 +58,6 @@ class Notebook:
         print("\nNote not found.")
 
     def create_note(self):
-        """Create a new note."""
         text = input("\nEnter the note content: ")
         new_note = Note(
             note_id=self.current_id,
@@ -75,7 +70,6 @@ class Notebook:
         print("\nNote created successfully.")
 
     def update_note(self):
-        """Update an existing note."""
         note_id = int(input("\nEnter the ID of the note to update: "))
         for note in self.notes:
             if note.id == note_id:
@@ -87,7 +81,6 @@ class Notebook:
         print("\nNote not found.")
 
     def delete_note(self):
-        """Delete a note."""
         note_id = int(input("\nEnter the ID of the note to delete: "))
         for note in self.notes:
             if note.id == note_id:
@@ -100,12 +93,12 @@ class Notebook:
     def menu(self):
         while True:
             print("\nNotebook Application")
-            print("1. Show All Notes")
-            print("2. Show Note Details")
-            print("3. Create Note")
-            print("4. Update Note")
-            print("5. Delete Note")
-            print("6. Exit")
+            print("     1. Show All Notes")
+            print("     2. Show Note Details")
+            print("     3. Create Note")
+            print("     4. Update Note")
+            print("     5. Delete Note")
+            print("     6. Exit")
             choice = input("Choose an option: ")
 
             if choice == "1":
@@ -119,7 +112,7 @@ class Notebook:
             elif choice == "5":
                 self.delete_note()
             elif choice == "6":
-                print("\nExiting application. Goodbye!")
+                print("\nExiting application... \nGoodbye!")
                 break
             else:
                 print("\nInvalid choice. Please try again.")
